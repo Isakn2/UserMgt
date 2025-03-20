@@ -1,26 +1,35 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UserManagementApp.Data;
+using UserManagementApp.Middleware;
 using UserManagementApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add DbContext with MySQL
+// Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
-// Add Identity services
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>() // if you plan to use roles
     .AddEntityFrameworkStores<AppDbContext>();
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+// Add the middleware to the pipeline
+app.UseMiddleware<UserStatusMiddleware>();
+
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseMigrationsEndPoint();
+}
+else
 {
     app.UseExceptionHandler("/Error");
     app.UseHsts();
@@ -31,7 +40,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // Enable authentication
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
