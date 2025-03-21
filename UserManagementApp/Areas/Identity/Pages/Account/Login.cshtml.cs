@@ -1,6 +1,7 @@
+#nullable enable
+
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
-#nullable disable
 
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ using UserManagementApp.Models;
 
 namespace UserManagementApp.Areas.Identity.Pages.Account
 {
+    [AllowAnonymous]
     public class LoginModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -32,52 +34,64 @@ namespace UserManagementApp.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _userManager = userManager; // Initialize UserManager
             _logger = logger;
+
+            // Initialize properties to avoid null warnings
+            Input = new InputModel();
+            ExternalLogins = new List<AuthenticationScheme>();
+            ReturnUrl = string.Empty;
+            ErrorMessage = string.Empty;
+            LogoutMessage = string.Empty;
         }
 
-
         [BindProperty]
-        public InputModel Input { get; set; }    
+        public InputModel Input { get; set; }
+
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
+
         public string ReturnUrl { get; set; }
 
         [TempData]
         public string ErrorMessage { get; set; }
 
+        [TempData]
+        public string LogoutMessage { get; set; } // Add TempData for logout message
+
         public class InputModel
         {
-            
             [Required]
             [EmailAddress]
-            public string Email { get; set; }
+            public string Email { get; set; } = string.Empty; // Ensure it's initialized
 
-            
             [Required]
             [DataType(DataType.Password)]
-            public string Password { get; set; }
+            public string Password { get; set; } = string.Empty; // Ensure it's initialized
 
-            
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public void OnGet(string? returnUrl = null)
         {
             if (!string.IsNullOrEmpty(ErrorMessage))
             {
                 ModelState.AddModelError(string.Empty, ErrorMessage);
             }
 
-            returnUrl ??= Url.Content("~/");
+            // Check for logout message
+            if (!string.IsNullOrEmpty(LogoutMessage))
+            {
+                ViewData["Message"] = LogoutMessage;
+            }
+
+            ReturnUrl = returnUrl ?? Url.Content("~/");
 
             // Clear the existing external cookie to ensure a clean login process
-            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+            HttpContext.SignOutAsync(IdentityConstants.ExternalScheme).Wait();
 
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-
-            ReturnUrl = returnUrl;
+            ExternalLogins = _signInManager.GetExternalAuthenticationSchemesAsync().Result.ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
 

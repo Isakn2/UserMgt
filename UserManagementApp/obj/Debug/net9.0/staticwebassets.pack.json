@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/scopedcss/projectbundle/UserManagementApp.bundle.scp.css",
-      "PackagePath": "staticwebassets/UserManagementApp.gpisx0m8jj.bundle.scp.css"
+      "PackagePath": "staticwebassets/UserManagementApp.hyocie0b6z.bundle.scp.css"
     },
     {
       "Id": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/css/site.css",
@@ -11,6 +11,14 @@
     {
       "Id": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/images/hero-image.jpg",
+      "PackagePath": "staticwebassets/images/hero-image.jpg"
+    },
+    {
+      "Id": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/images/login-image.jpg",
+      "PackagePath": "staticwebassets/images/login-image.jpg"
     },
     {
       "Id": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/js/site.js",

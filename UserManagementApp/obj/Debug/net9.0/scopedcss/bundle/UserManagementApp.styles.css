@@ -1,7 +1,4 @@
 /* _content/UserManagementApp/Pages/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
 a.navbar-brand[b-z5xok3ft6y] {
   white-space: normal;
   text-align: center;
@@ -41,7 +38,7 @@ button.accept-policy[b-z5xok3ft6y] {
 }
 
 .footer[b-z5xok3ft6y] {
-  position: absolute;
+  position: flex;
   bottom: 0;
   width: 100%;
   white-space: nowrap;

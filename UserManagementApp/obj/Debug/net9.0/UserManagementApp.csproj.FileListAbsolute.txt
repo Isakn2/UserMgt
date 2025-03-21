@@ -281,7 +281,6 @@
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/t0qo7o574p-dd6z7egasc.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/b9lhb08218-5pze98is44.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/yfc7ypekbg-mlv21k5csn.gz
-/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/ifm3g79ye8-lzxhhgzgm2.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/kpcjccfvcp-61n19gt1b8.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/8z03z80c97-xtxxf3hu2r.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/2pfxfeopu0-bqjiyaj88i.gz
@@ -343,8 +342,6 @@
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/ldjlfkuy61-muycvpuwrr.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/fiumj3qj2d-87fc7y1x7t.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/zs2g7a31gx-mlv21k5csn.gz
-/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/j1apysjo98-gpisx0m8jj.gz
-/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/n0gjqywc7t-gpisx0m8jj.gz
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/staticwebassets.build.json
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/staticwebassets.development.json
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/staticwebassets.build.endpoints.json
@@ -360,3 +357,6 @@
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/UserManagementApp.pdb
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/UserManagementApp.genruntimeconfig.cache
 /Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/ref/UserManagementApp.dll
+/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/j1apysjo98-hyocie0b6z.gz
+/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/n0gjqywc7t-hyocie0b6z.gz
+/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/obj/Debug/net9.0/compressed/ifm3g79ye8-s5drnlywqr.gz
