@@ -4,48 +4,53 @@
     ViewData["Title"] = "User Management";
 }
 
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["Message"]
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">User Management</h3>
     </div>
-}
-
-<h1>User Management</h1>
-<form method="post" id="actionForm">
-    @Html.AntiForgeryToken()
-    <div class="toolbar mb-3">
-        <button type="button" class="btn btn-danger" id="blockButton">Block</button>
-        <button type="button" class="btn btn-success" id="unblockButton">Unblock</button>
-        <button type="button" class="btn btn-warning" id="deleteButton">Delete</button>
-    </div>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th><input type="checkbox" id="selectAll" name="selectAll" /></th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Last Login Time</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model.Users != null)
-            {
-                @foreach (var user in Model.Users)
-                {
+    <div class="card-body">
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Message"]
+            </div>
+        }
+        <form method="post" id="actionForm">
+            @Html.AntiForgeryToken()
+            <div class="toolbar mb-3">
+                <button type="button" class="btn btn-danger" id="blockButton">Block</button>
+                <button type="button" class="btn btn-success" id="unblockButton">Unblock</button>
+                <button type="button" class="btn btn-warning" id="deleteButton">Delete</button>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
                     <tr>
-                        <td><input type="checkbox" class="userCheckbox" id="userCheckbox_@user.Id" name="userCheckbox_@user.Id" value="@user.Id" /></td>
-                        <td>@user.Name</td>
-                        <td>@user.Email</td>
-                        <td>@user.LastLoginTime</td>
-                        <td>@user.Status</td>
+                        <th><input type="checkbox" id="selectAll" name="selectAll" /></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Last Login Time</th>
+                        <th>Status</th>
                     </tr>
-                }
-            }
-        </tbody>
-    </table>
-</form>
+                </thead>
+                <tbody>
+                    @if (Model.Users != null)
+                    {
+                        @foreach (var user in Model.Users)
+                        {
+                            <tr>
+                                <td><input type="checkbox" class="userCheckbox" id="userCheckbox_@user.Id" name="userCheckbox_@user.Id" value="@user.Id" /></td>
+                                <td>@user.Name</td>
+                                <td>@user.Email</td>
+                                <td>@user.LastLoginTime</td>
+                                <td>@user.Status</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
 
 @section Scripts {
     <script>
