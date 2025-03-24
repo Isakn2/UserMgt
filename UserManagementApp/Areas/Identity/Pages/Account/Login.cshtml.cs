@@ -77,17 +77,18 @@ namespace UserManagementApp.Areas.Identity.Pages.Account
                 ModelState.AddModelError(string.Empty, ErrorMessage);
             }
 
-            // Check for logout message
-            if (!string.IsNullOrEmpty(LogoutMessage))
+            // Check for both logout AND registration messages
+            if (!string.IsNullOrEmpty(TempData["Message"] as string))
+            {
+                ViewData["Message"] = TempData["Message"];
+            }
+            else if (!string.IsNullOrEmpty(LogoutMessage))
             {
                 ViewData["Message"] = LogoutMessage;
             }
 
             ReturnUrl = returnUrl ?? Url.Content("~/");
-
-            // Clear the existing external cookie to ensure a clean login process
             HttpContext.SignOutAsync(IdentityConstants.ExternalScheme).Wait();
-
             ExternalLogins = _signInManager.GetExternalAuthenticationSchemesAsync().Result.ToList();
         }
 

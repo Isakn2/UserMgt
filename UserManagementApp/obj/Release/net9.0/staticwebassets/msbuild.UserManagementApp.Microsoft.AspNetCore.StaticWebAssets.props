@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c4d5bdic46</Fingerprint>
-      <Integrity>VM/hPPYVlF6wmawnIWzHZgzgmydLToo2QiJQDZ600rA=</Integrity>
+      <Fingerprint>ciggjv9y23</Fingerprint>
+      <Integrity>bGk5H9mtLqHVeCVKdaL5Isd+7Tr7mJe0mIniaUemJ5o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\hero-image.jpg'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>581i8rnbbg</Fingerprint>
-      <Integrity>tVpr7mfktc8CXArDQabZ/1Wpe5ANfssRSed8DoDqG14=</Integrity>
+      <Fingerprint>lzghja3fqv</Fingerprint>
+      <Integrity>v0Q5SZf/kg2gDNDpVfNaM+euRdHfFGhOFDa+4dC4ZRw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\login-image.jpg'))</OriginalItemSpec>

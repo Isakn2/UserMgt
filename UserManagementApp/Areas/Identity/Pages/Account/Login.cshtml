@@ -10,11 +10,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <!-- Display the logout message -->
-                    @if (ViewData["Message"] != null)
+                    <!-- @if (ViewData["Message"] != null)
                     {
                         <div class="alert alert-info">
                             @ViewData["Message"]
                         </div>
+                    } -->
+                    <!-- Display the logout message -->
+                    @if (!string.IsNullOrEmpty(ViewData["Message"] as string))
+                    {
+                        <div class="alert alert-success">@ViewData["Message"]</div>
                     }
 
                     <div class="card shadow-sm">

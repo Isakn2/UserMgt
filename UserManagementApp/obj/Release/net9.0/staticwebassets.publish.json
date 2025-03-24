@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "esxZB8zKpU7X9BthSgotrYDAFPX4jyIp694hXjIzEkM=",
+  "Hash": "UeDzfaUgt9KRMt8x0TJ6gCo7Nv1AfBNBpbqbalyGawQ=",
   "Source": "UserManagementApp",
   "BasePath": "_content/UserManagementApp",
   "Mode": "Default",
@@ -6541,8 +6541,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c4d5bdic46",
-      "Integrity": "VM/hPPYVlF6wmawnIWzHZgzgmydLToo2QiJQDZ600rA=",
+      "Fingerprint": "ciggjv9y23",
+      "Integrity": "bGk5H9mtLqHVeCVKdaL5Isd+7Tr7mJe0mIniaUemJ5o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/hero-image.jpg"
@@ -6562,8 +6562,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "581i8rnbbg",
-      "Integrity": "tVpr7mfktc8CXArDQabZ/1Wpe5ANfssRSed8DoDqG14=",
+      "Fingerprint": "lzghja3fqv",
+      "Integrity": "v0Q5SZf/kg2gDNDpVfNaM+euRdHfFGhOFDa+4dC4ZRw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/login-image.jpg"
@@ -22900,7 +22900,7 @@
       ]
     },
     {
-      "Route": "images/hero-image.c4d5bdic46.jpg",
+      "Route": "images/hero-image.ciggjv9y23.jpg",
       "AssetFile": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/images/hero-image.jpg",
       "Selectors": [],
       "ResponseHeaders": [
@@ -22910,7 +22910,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2269896"
+          "Value": "534871"
         },
         {
           "Name": "Content-Type",
@@ -22918,11 +22918,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VM/hPPYVlF6wmawnIWzHZgzgmydLToo2QiJQDZ600rA=\""
+          "Value": "\"bGk5H9mtLqHVeCVKdaL5Isd+7Tr7mJe0mIniaUemJ5o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 21 Mar 2025 01:03:01 GMT"
+          "Value": "Sun, 23 Mar 2025 08:23:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22932,7 +22932,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c4d5bdic46"
+          "Value": "ciggjv9y23"
         },
         {
           "Name": "label",
@@ -22940,7 +22940,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VM/hPPYVlF6wmawnIWzHZgzgmydLToo2QiJQDZ600rA="
+          "Value": "sha256-bGk5H9mtLqHVeCVKdaL5Isd+7Tr7mJe0mIniaUemJ5o="
         }
       ]
     },
@@ -22955,7 +22955,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2269896"
+          "Value": "534871"
         },
         {
           "Name": "Content-Type",
@@ -22963,11 +22963,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VM/hPPYVlF6wmawnIWzHZgzgmydLToo2QiJQDZ600rA=\""
+          "Value": "\"bGk5H9mtLqHVeCVKdaL5Isd+7Tr7mJe0mIniaUemJ5o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 21 Mar 2025 01:03:01 GMT"
+          "Value": "Sun, 23 Mar 2025 08:23:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22977,52 +22977,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VM/hPPYVlF6wmawnIWzHZgzgmydLToo2QiJQDZ600rA="
-        }
-      ]
-    },
-    {
-      "Route": "images/login-image.581i8rnbbg.jpg",
-      "AssetFile": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/images/login-image.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "795371"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tVpr7mfktc8CXArDQabZ/1Wpe5ANfssRSed8DoDqG14=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 21 Mar 2025 01:31:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "581i8rnbbg"
-        },
-        {
-          "Name": "label",
-          "Value": "images/login-image.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tVpr7mfktc8CXArDQabZ/1Wpe5ANfssRSed8DoDqG14="
+          "Value": "sha256-bGk5H9mtLqHVeCVKdaL5Isd+7Tr7mJe0mIniaUemJ5o="
         }
       ]
     },
@@ -23037,7 +22992,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "795371"
+          "Value": "299039"
         },
         {
           "Name": "Content-Type",
@@ -23045,11 +23000,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tVpr7mfktc8CXArDQabZ/1Wpe5ANfssRSed8DoDqG14=\""
+          "Value": "\"v0Q5SZf/kg2gDNDpVfNaM+euRdHfFGhOFDa+4dC4ZRw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 21 Mar 2025 01:31:49 GMT"
+          "Value": "Sun, 23 Mar 2025 08:23:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23059,7 +23014,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tVpr7mfktc8CXArDQabZ/1Wpe5ANfssRSed8DoDqG14="
+          "Value": "sha256-v0Q5SZf/kg2gDNDpVfNaM+euRdHfFGhOFDa+4dC4ZRw="
+        }
+      ]
+    },
+    {
+      "Route": "images/login-image.lzghja3fqv.jpg",
+      "AssetFile": "/Users/isaacsilvagutierrez/Documents/DataAnalysis/Itransition/task4/UserMgt/UserManagementApp/wwwroot/images/login-image.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "299039"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v0Q5SZf/kg2gDNDpVfNaM+euRdHfFGhOFDa+4dC4ZRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 08:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzghja3fqv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/login-image.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v0Q5SZf/kg2gDNDpVfNaM+euRdHfFGhOFDa+4dC4ZRw="
         }
       ]
     },

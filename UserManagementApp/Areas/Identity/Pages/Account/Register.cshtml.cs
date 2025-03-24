@@ -96,11 +96,12 @@ namespace UserManagementApp.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
-                    // Set a success message
+                    
+                    // Clear any existing messages first
+                    TempData.Remove("Message");
+                    
+                    // Set new message
                     TempData["Message"] = "Registration successful! Please log in to continue.";
-
-                    // Redirect to the login page
                     return RedirectToPage("./Login");
                 }
 
