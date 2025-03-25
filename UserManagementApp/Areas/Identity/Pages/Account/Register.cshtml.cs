@@ -65,11 +65,9 @@ namespace UserManagementApp.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            [DataType(DataType.Password)]
+            [Required(ErrorMessage = "Password is required")]
             [Display(Name = "Password")]
-            public string Password { get; set; }
+            public string Password { get; set; } // No length/complexity rules
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
@@ -87,7 +85,7 @@ namespace UserManagementApp.Areas.Identity.Pages.Account
                 var user = CreateUser();
 
                 // Set the Name property
-                user.Name = Input.Name; // Add this line
+                user.Name = Input.Name;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);

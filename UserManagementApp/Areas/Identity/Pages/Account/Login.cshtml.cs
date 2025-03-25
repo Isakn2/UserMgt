@@ -95,44 +95,61 @@ namespace UserManagementApp.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var user = await _userManager.FindByEmailAsync(Input.Email);
+                
+                // Explicit null check before accessing user properties
+                if (user is not null && user.Status == "Blocked")
+                {
+                    ModelState.AddModelError(string.Empty, "Your account is blocked.");
+                    return Page();
+                }
+
+                var result = await _signInManager.PasswordSignInAsync(
+                    Input.Email, 
+                    Input.Password, 
+                    Input.RememberMe, 
+                    lockoutOnFailure: true);
+
                 if (result.Succeeded)
                 {
-                    // Update LastLoginTime for the user
-                    var user = await _userManager.FindByEmailAsync(Input.Email);
-                    if (user != null)
+                    // Safe to access user here because PasswordSignInAsync succeeded
+                    var updatedUser = await _userManager.FindByEmailAsync(Input.Email);
+                    if (updatedUser is not null)
                     {
-                        user.LastLoginTime = DateTime.UtcNow; // Use UTC time for consistency
-                        await _userManager.UpdateAsync(user);
+                        updatedUser.LastLoginTime = DateTime.UtcNow;
+                        await _userManager.UpdateAsync(updatedUser);
                     }
 
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
+                
                 if (result.RequiresTwoFactor)
                 {
                     return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
                 }
+                
                 if (result.IsLockedOut)
                 {
                     _logger.LogWarning("User account locked out.");
                     return RedirectToPage("./Lockout");
                 }
+                
+                // More specific error messages
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Account not found.");
+                }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
+                    ModelState.AddModelError(string.Empty, "Invalid password.");
                 }
             }
 
-            // If we got this far, something failed, redisplay form
             return Page();
         }
     }

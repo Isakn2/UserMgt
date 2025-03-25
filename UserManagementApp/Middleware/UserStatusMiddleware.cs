@@ -14,21 +14,32 @@ namespace UserManagementApp.Middleware
             _next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context, UserManager<ApplicationUser> userManager)
+        public async Task InvokeAsync(
+            HttpContext context,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
-            // Check if the user is authenticated
+            // Skip middleware for login/register pages
+            if (context.Request.Path.StartsWithSegments("/Identity/Account/Login") || 
+                context.Request.Path.StartsWithSegments("/Identity/Account/Register"))
+            {
+                await _next(context);
+                return;
+            }
+
             if (context.User?.Identity?.IsAuthenticated == true)
             {
                 var user = await userManager.GetUserAsync(context.User);
+                
                 if (user == null || user.Status == "Blocked")
                 {
-                    // Redirect blocked or deleted users to the login page
-                    context.Response.Redirect("/Identity/Account/Login");
+                    await signInManager.SignOutAsync();
+                    context.Response.Redirect("/Identity/Account/Login?returnUrl=" + 
+                        Uri.EscapeDataString(context.Request.Path));
                     return;
                 }
             }
 
-            // Call the next middleware in the pipeline
             await _next(context);
         }
     }
